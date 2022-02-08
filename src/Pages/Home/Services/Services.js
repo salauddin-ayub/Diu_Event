@@ -10,18 +10,18 @@ import Typography from '@mui/material/Typography';
 
 const services = [
     {
-        name: 'Field', 
-        description:'We provide a big field include different types of playing games facility',
+        name: 'Sports Field', 
+        description:'We provide a big field include different types of sports facility',
         img: sport
     },
     {
         name: 'Event Spot', 
-        description:'We provide a big field include different types of playing games facility',
+        description:'We have some amazing place to spent quality time.All places are well decorated and nice designed.',
         img: party
     },
     {
         name: 'Auditorium', 
-        description:'We provide a big field include different types of playing games facility',
+        description:'We provide a big auditorium.To arrenge a program ,this place is best choice for anyone.',
         img: audit
     }
 ]
