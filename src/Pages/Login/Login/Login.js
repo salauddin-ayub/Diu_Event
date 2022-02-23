@@ -1,10 +1,19 @@
-import { Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Button, CircularProgress, Alert, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import login from '../../../images/login.jpg'
+import login from '../../../images/login.jpg';
+import useAuth from '../../../hooks/useAuth';
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
+    const {user, loginUser, signInWithGoogle, isLoading, authError} = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+
     const handleOnChange = e =>{
         const field = e.target.name;
         const value = e.target.value;
@@ -14,8 +23,12 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        alert('hello')
+        loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
+    }
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle(location, history)
+
     }
     return (
         <Container>
@@ -45,7 +58,12 @@ const Login = () => {
                                to="/register">
                                <Button variant="text">New User? Please Register</Button>
                             </NavLink>
+                            {isLoading && <CircularProgress />}
+                           {user?.email && <Alert severity="success">Succesfully loged in!</Alert>}
+                        {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
+                    <p>----------------</p>
+                    <Button onClick={handleGoogleSignIn} variant="contained">Sign In With Google</Button>
 
                 </Grid>
                 <Grid item xs={12} md={6}>

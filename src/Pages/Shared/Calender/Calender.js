@@ -12,6 +12,7 @@ const Calender = ({ date, setDate}) => {
         value={date}
         onChange={(newValue) => {
           setDate(newValue);
+          console.log(newValue);
         }}
         renderInput={(params) => <TextField {...params} />}
       />
