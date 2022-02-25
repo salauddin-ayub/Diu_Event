@@ -6,6 +6,10 @@
     "@date-io/date-fns": "^2.13.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@fortawesome/free-brands-svg-icons": "^6.0.0",
+    "@fortawesome/free-solid-svg-icons": "^6.0.0",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "@material-ui/pickers": "^3.3.10",
     "@mui/icons-material": "^5.3.1",
     "@mui/lab": "^5.0.0-alpha.68",
@@ -17,8 +21,12 @@
     "firebase": "^9.6.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^5.0.0",
+    "react-swiper": "^0.1.5",
+    "reactstrap": "^9.0.1",
+    "swiper": "^8.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

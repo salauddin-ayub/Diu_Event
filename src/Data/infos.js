@@ -8,7 +8,7 @@ const infos = [
     {
         icon : 'location',
         title : "Visit our location",
-        description : 'House-1, Road 6, Dhaka 1205',
+        description : 'Asulia, Savar, Dhaka',
         bg: 'bg-dark'
     },
     {

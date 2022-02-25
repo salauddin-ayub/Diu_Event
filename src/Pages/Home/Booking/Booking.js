@@ -28,16 +28,16 @@ const Booking = () => {
             textAlign: 'left',
             }}>
               <Box>
-              <Typography variant="h6" sx={{ mb: 5 }} style={{color: '#5CE7ED'}}>
+              <Typography variant="h6" sx={{ mb: 1 }} style={{color: '#00c689'}}>
                  Booking
               </Typography> 
               <Typography variant="h4" style={{color: 'black'}}>
                  Make your book today
               </Typography>   
-              <Typography variant="h6" sx={{ my: 5 }} style={{ color: 'black', fontsize: 14, fontWeight: 300}}>
+              <Typography variant="h6" sx={{ my: 1 }} style={{ color: 'black', fontsize: 14, fontWeight: 300}}>
                  you can apply for any of our spot to visit or enjoy.
               </Typography> 
-              <Button variant="contained" style={{backgroundColor: '#5CE7ED'}}>Learn more</Button> 
+              <Button variant="contained" style={{backgroundColor: '#00c689'}}>Learn more</Button> 
               </Box>       
           </Grid>
         </Grid>

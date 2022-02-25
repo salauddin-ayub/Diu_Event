@@ -9,7 +9,7 @@ const Service = (props) => {
     const{name, description, img} = props.service;
     return (
       <Grid item xs={2} sm={4} md={4}>
-        <Card sx={{ minWidth: 275, border: 0, boxShadow: 0 }}>
+        <Card sx={{ minWidth: 400, border: 0, boxShadow: 0, height: 200}}>
         <CardMedia
         component="img"
         style={{ width: 'auto', height: '80px', margin: ' 0 auto'}}
