@@ -11,6 +11,7 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Status from './Pages/Appointment/Status/Status';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
+          <Route path="/appointmentEdit/:appointmentId">
+            <Status />
+          </Route>
+          
           <Route exact path="/">
             <Home />
           </Route>

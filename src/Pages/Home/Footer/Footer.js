@@ -11,44 +11,37 @@ const Footer = () => {
 	const [ modalIsOpen, setModalIsOpen ] = useState(false);
 
 	const noNamed = [
-		{ name: 's.portal@gmail.com', link: '/' },
+		{ name: 'c.event@gmail.com', link: '/' },
 		{ name: '+8809-6380-79309', link: '/checkup' },
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' }
+		{ name: 'Emergency contact', link: '/emergency' },
+		
 	];
 	const ourAddress = [
-		{ name: 'House-1, Road 6, Dhaka 1205', link: '//google.com/map' },
+		{ name: 'Asulia, Savar, Dhaka', link: '//google.com/map' },
 		{ name: 'View in map', link: '//google.com/map' }
 	];
 	const oralHealth = [
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' }
+		{ name: 'Emergency booking', link: '/emergency' },
+		{ name: 'Extra Facilty', link: '/facilty' },
+		{ name: 'Medical', link: '/medical' },
+		{ name: '+8807-04576-76788', link: '/medical' },
+		
 	];
 	const services = [
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' }
+		{ name: 'Sports Field', link: '/field' },
+		{ name: 'Bonomaya', link: '/bn' },
+		{ name: 'Auditorium', link: '/audit' },
+		{ name: 'Diu garden', link: '/garden' },
+		
 	];
 	return (
 		<>
 			<footer className="footer-area clear-both">
 				<div className="container pt-3">
 					<div className="row py-5">
-						<FooterCol key={1} menuTitle={"Online 's Portal"} menuItems={noNamed} />
+						<FooterCol key={1} menuTitle={"DIU EVENT"} menuItems={noNamed} />
 						<FooterCol key={2} menuTitle="Services" menuItems={services} />
-						<FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth} />
+						<FooterCol key={3} menuTitle="Emergency" menuItems={oralHealth} />
 						<FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
 							<ul className="social-media list-inline">
 								<li className="list-inline-item">
@@ -76,7 +69,7 @@ const Footer = () => {
 						</FooterCol>
 					</div>
 					<div className="copyRight text-center pb-3 text-secondary">
-						<p> &copy; 2021 Developed by Prionto Abdullah</p>
+						<p> &copy; 2022 Developed by Salauddin Ayub</p>
 					</div>
 				</div>
 			</footer>
@@ -104,13 +97,13 @@ const Footer = () => {
 					<p className="text-center mb-2 mt-3">
 						<small>You need to Login with this email and password</small>
 					</p>
-					<h5 className="text-secondary mb-3">Email: doctors.portal@gmail.com</h5>
-					<h6 className="text-secondary mb-3">Password: AdminDoctor@123</h6>
+					<h5 className="text-secondary mb-3">Email: salauddinnayub@gmail.com</h5>
+					<h6 className="text-secondary mb-3">Password: ab1234@;</h6>
                     <p className="text-center mb-2 mt-3 px-5">
 						<small>Or you can create a new account or signIn with a account which You did not use or provide as an patient appointment email. </small>
 					</p>
 					<div className="form-group text-center mt-2">
-						<Link to="/dashboard/dashboard">
+						<Link to="/dashboard">
 							<button className="btn btn-success mr-3 text-white">Open Admin Panel</button>
 						</Link>
 					</div>

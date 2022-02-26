@@ -28,6 +28,17 @@ import AddService from '../AddService/AddService';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
+import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
+import {
+	faCalendar,
+	faGripHorizontal,
+	faQuoteLeft, faSignOutAlt,
+	faUser,
+	faUserPlus,
+	faUsers
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const drawerWidth = 240;
 
@@ -45,32 +56,38 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <Link to="/event-booking">
-          <Button color="inherit" sx={{ color: 'liteorange'}}>Event-Booking</Button>
+          <Link to="/event-booking">
+          {/* <Button color="inherit" sx={{ color: 'black'}}>Event-Booking</Button> */}
+          <FontAwesomeIcon  icon={faCalendar} /> <span style={{color: 'black', textdecoration: 'none'}}>Event-Booking</span>
           </Link>
+          <br />
           <Link to={`${url}`}>
-          <Button color="inherit" sx={{ color: 'liteorange'}}>Dashboard</Button>
+          {/* <Button color="inherit" sx={{ color: 'liteorange'}}>Dashboard</Button> */}
+          <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
           </Link>
+          <br />
           {admin && <Box>
             <Link to={`${url}/makeAdmin`}>
-          <Button color="inherit" sx={{ color: 'liteorange'}}>Make Admin</Button>
+          {/* <Button color="inherit" sx={{ color: 'liteorange'}}>Make Admin</Button> */}
+          <FontAwesomeIcon icon={faUsers} /> <span>Make Admin</span>
           </Link>
+          <br />
           <Link to={`${url}/addService`}>
-          <Button color="inherit" sx={{ color: 'liteorange'}}>Add Service</Button>
+          {/* <Button color="inherit" sx={{ color: 'liteorange'}}>Add Service</Button> */}
+          <FontAwesomeIcon icon={faUserPlus} /> <span>Add Service</span>
           </Link>
-
           </Box>}
        
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+      {/* <List>
+        {['Event-Booking', 'Dashboard', 'Make Admin', 'Add Service'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? <FontAwesomeIcon icon={faGripHorizontal} /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
