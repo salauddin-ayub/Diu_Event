@@ -77,7 +77,16 @@ const Navigation = () => {
                 Contact Us
               </Link>
             </li>
-            <li> <Button onClick={logout} color="inherit">Logout</Button></li>
+            {
+              user?.email ?
+              <li> <Button onClick={logout} color="inherit">Logout</Button></li>
+              :
+              <Link style={{ textDecoration: 'none', color: 'black' }} to="/login">
+                    <Button color="inherit">Login</Button>                   
+                    </Link>
+
+            }
+           
             {/* {
               user?.email ?
                   <Box>

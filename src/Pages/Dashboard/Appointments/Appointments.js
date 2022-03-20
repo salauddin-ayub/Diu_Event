@@ -55,6 +55,9 @@ const Appointments = ({date}) => {
         </TableBody>
       </Table>
     </TableContainer>
+
+    
+    
         </div>
     );
 };

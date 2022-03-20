@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './Status.css';
 
 
 const Status = () => {
@@ -39,23 +40,23 @@ const Status = () => {
       };
 
     return (
-        <div className="pt-12">
+        <div className="header pt-12">
         <h2 className="text-2xl text-gray-700 font-bold py-4">
           Update Appointment Status
         </h2>
         <span className="py-2 text-green-500">{message}</span>
-        <div className="pb-24">
-          <h2 className="text-xl text-yellow-700">
+        <div className="box pb-24">
+          <h2 style={{ color: "#19d3ae"}} className="text-xl text-yellow-700">
             Service Name: ({appointment.serviceName || ""})
           </h2>
-          <h2 className="tex-xl text-yellow-500 p-2">
+          <h2 style={{ color: "#19d3ae"}} className="tex-xl text-yellow-500 p-2">
             Appointment-date: {appointment.date || ""}
           </h2>
           <form
             className="xl:shadow-lg lg:shadow-lg p-4 xl:mx-96 lg:mx-96 rounded-lg"
             onSubmit={handleUpdateOrderStatus}
           >
-            <label htmlFor="status">Update Action Status</label>
+            <label style={{ color: "#19d3ae"}} htmlFor="status">Update Action Status</label>
             <br />
   
             <select
