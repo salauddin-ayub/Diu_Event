@@ -15,7 +15,7 @@ const services = [
         img: sport
     },
     {
-        name: 'Event Spot', 
+        name: 'Campus', 
         description:'We have some amazing place to spent quality time.All places are well decorated and nice designed.',
         img: party
     },

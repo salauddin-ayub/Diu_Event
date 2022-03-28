@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../App.css";
 import useAuth from "../../../hooks/useAuth";
-import logo from "../../../images/logo.png";
+import logo from "../../../images/logo2.png";
+import userPhoto from "../../../images/Group 2.png"
 
 const Navigation = () => {
   const [isSticky, setSticky] = useState(false);
   const [isCollapsed, setCollapsed] = useState(null);
   const [navStyle, setNavStyle] = useState();
   const { user, logout } = useAuth();
+  console.log(user);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -33,7 +35,7 @@ const Navigation = () => {
       <div className="container">
         <Link className="navbar-brand" to="/" style={{ color: "#15D1C8" }}>
           <img src={logo} alt="logo" />
-          <span className="logo-name"> Campus Event </span>
+          <span className="logo-name"> Get Field Fast </span>
         </Link>
         <button
           onClick={() => setCollapsed(!isCollapsed ? "show" : null)}
@@ -51,7 +53,7 @@ const Navigation = () => {
           className={`collapse navbar-collapse ${isCollapsed}`}
           id="collapsibleNavId"
         >
-          <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+          <ul className="navbar-nav align-items-center">
             <li className="nav-item active">
               <Link className="nav-link" to="/">
                 Home
@@ -77,15 +79,45 @@ const Navigation = () => {
                 Contact Us
               </Link>
             </li>
+            <li className='nav-item'>
             {
               user?.email ?
-              <li> <Button onClick={logout} color="inherit">Logout</Button></li>
+              <Link to='/' className='nav-link'>
+                {user.displayName} 
+                <img className='ml-3' src={user.photoURL ? user.photoURL : userPhoto} width="35px" alt="" />              
+              {/* <Button onClick={logout} color="inherit">Logout</Button> */}
+              </Link>     
               :
-              <Link style={{ textDecoration: 'none', color: 'black' }} to="/login">
-                    <Button color="inherit">Login</Button>                   
-                    </Link>
-
+              <Link to='/login' className='nav-Link'>
+              <button
+                 className='btn btn-danger btn-rounded'
+              >
+                 Login
+             </button>
+             </Link>
             }
+            </li>
+            <li className='nav-item'>
+              {
+                user.email ?
+                <Link to='/' className='nav-link'>
+                  <button onClick={logout}
+                      className='btn btn-danger btn-rounded'
+                  >
+                    Sign Out
+                </button>
+                </Link>
+                :
+                <Link to='/register' className='nav-Link'>
+                   <button
+                      className='btn btn-danger btn-rounded'
+                   >
+                      Sign Up
+                  </button>
+                </Link>
+              }
+            </li>
+          
            
             {/* {
               user?.email ?

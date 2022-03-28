@@ -19,7 +19,7 @@ const Banner = () => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptates nobis numquam velit? Perferendis impedit perspiciatis ea aut corrupti vitae?
 						</p>
 						<Link className="btn btn-primary button-style" to="/event-booking">
-							Book Event
+							Appointment
 						</Link>
 					</div>
 					<div className="col-md-6 d-none d-md-block offset-1">
