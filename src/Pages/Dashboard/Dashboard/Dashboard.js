@@ -34,6 +34,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Dashboard.css';
 import logo from "../../../images/logo2.png";
+import userPhoto from '../../../images/Group 2.png';
 
 
 const drawerWidth = 240;
@@ -62,8 +63,9 @@ function Dashboard(props) {
 					</Link>
 				</li>
 				<li>
-						<FontAwesomeIcon icon={faUser} className="text-white" />
-						<span className="text-white navName ml-1">{user.userName}</span>
+						{/* <FontAwesomeIcon icon={faUser} className="text-white" /> */}
+            <img className='ml-3' src={user.photoURL ? user.photoURL : userPhoto} width="35px"  alt="" /> 
+						<span className="text-white navName ml-1">{user.displayName}</span>
 				</li>
         <li>
 							<Link to={`${url}`} className="text-white">

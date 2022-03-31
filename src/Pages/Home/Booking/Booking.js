@@ -31,11 +31,11 @@ const Booking = () => {
               <Typography variant="h6" sx={{ mb: 1 }} style={{color: '#00c689'}}>
                  Booking
               </Typography> 
-              <Typography variant="h4" style={{color: 'black'}}>
+              <Typography variant="h4" style={{color: '#00c689'}}>
                  Make your book today
               </Typography>   
-              <Typography variant="h6" sx={{ my: 1 }} style={{ color: 'black', fontsize: 14, fontWeight: 300}}>
-                 you can apply for any of our spot to visit or enjoy.
+              <Typography variant="h6" sx={{ my: 1 }} style={{ color: 'black', fontsize: 12, fontWeight: 300}}>
+                 you can apply for any of our spot to visit or enjoy.Hundreds of clubs and organisations use our platform to manage their sports facilities. From sports clubs to local councils, Pitchbooking can streamline your booking and payments process.
               </Typography> 
               <Button variant="contained" style={{backgroundColor: '#00c689'}}>Learn more</Button> 
               </Box>       

@@ -9,10 +9,16 @@ const Service = (props) => {
     const{name, description, img} = props.service;
     return (
       <Grid item xs={4} sm={4} md={4}>
-        <Card sx={{ minWidth: 400, border: 0, boxShadow: 0, height: 200}}>
+        <Card sx={[{ minWidth: 380,  boxShadow: 1, height: 200,backgroundColor: '#EDF1FF', border:'1px solid transparent',transition:'all 400ms ease'},{
+                 '&:hover':{
+                    borderColor: 'rgba(77, 181, 255, 0.4)',
+                    background: 'transparent'
+                 }
+             }
+      ]}>
         <CardMedia
         component="img"
-        style={{ width: 'auto', height: '80px', margin: ' 0 auto'}}
+        style={{ width: 'auto', height: '70px', margin: ' 0 auto', mt: '10px' }}
         image={img}
         alt="Paella dish"
         />

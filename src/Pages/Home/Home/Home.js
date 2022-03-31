@@ -7,6 +7,7 @@ import Infos from '../../Infos/Infos';
 import Features from '../Features/Features';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
+import Testimonials from '../testimonials/Testimonials';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <Services></Services>
             <Booking></Booking>
             <Features></Features>
+            <Testimonials></Testimonials>
             <Contact></Contact>
             <Footer></Footer>
             

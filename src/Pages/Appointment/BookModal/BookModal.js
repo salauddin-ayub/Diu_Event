@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import useAuth from '../../../hooks/useAuth';
+// import DateRangePicker from '@mui/lab/DateRangePicker';
+// import { DateRangePickerComponent } from '@syncfusion/ej2-react-calendars';
 
 const style = {
   position: 'absolute',
@@ -117,6 +119,7 @@ const BookModal = ({openBooking, handleBookingClose, booking, date, setbookingSu
                  defaultValue={date.toDateString()}
                  size="small"
                />
+             
                <Button type="submit" variant="contained">Submit</Button>
             </form>
           </Box>

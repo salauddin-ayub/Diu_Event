@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 const services = [
     {
         name: 'Sports Field', 
-        description:'We provide a big field include different types of sports facility',
+        description:'We provide a big field include different types of sports facility.Students often do participate in various types of game like Cricket, Football and others.',
         img: sport
     },
     {

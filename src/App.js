@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Status from './Pages/Appointment/Status/Status';
 
+
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
           <PrivateRoute path="/dashboard">
             <Dashboard/>
           </PrivateRoute>
+
           <Route path="/home">
             <Home />
           </Route>
